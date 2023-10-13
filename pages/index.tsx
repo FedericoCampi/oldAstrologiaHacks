@@ -3,16 +3,26 @@ import Header from "../components/Header";
 import Landing from "../components/Landing";
 import { Tab } from '@headlessui/react'
 import { fetchCategories } from "../utils/fetchCategories";
+import { fetchProducts } from "../utils/fetchProducts";
+import Product from "../components/Product";
+import Basket from "../components/Basket";
 
 interface Props {
     categories: Category[];
+    products: Product[];
 }
 
-export default function Page({ categories }: Props) {
+export default function Page({ categories, products }: Props) {
     
+    // filter product by category
+    const showProducts = (category: number) => {
+        return products.filter((product) => product.category._ref === categories[category]._id)
+        .map((product) => <Product product={product} key={product._id}/> );
+    }
     return(
         <div>
             <Header/>
+            <Basket/>
             <main className="relative h-[200vh] bg-[#E7ECEE]">
                 <Landing/>
             </main>
@@ -40,11 +50,11 @@ export default function Page({ categories }: Props) {
                             </Tab>
                         ))}
                         </Tab.List>
-                        <Tab.Panels className="mx-auto max-w-fit pt-10 pb-24 sm:px-4">
-                        <Tab.Panel className="tabPanel">showProducts</Tab.Panel>
-                        <Tab.Panel className="tabPanel">showProducts</Tab.Panel>
-                        <Tab.Panel className="tabPanel">showProducts</Tab.Panel>
-                        <Tab.Panel className="tabPanel">showProducts</Tab.Panel>
+                        <Tab.Panels className="mx-auto max-w-fit pt-10 pb-18 sm:px-4 md:px-32">
+                            <Tab.Panel className="tabPanel">{showProducts(0)}</Tab.Panel>
+                            <Tab.Panel className="tabPanel">{showProducts(1)}</Tab.Panel>
+                            <Tab.Panel className="tabPanel">{showProducts(2)}</Tab.Panel>
+                            <Tab.Panel className="tabPanel">{showProducts(3)}</Tab.Panel>
                         </Tab.Panels>
                     </Tab.Group>
                 </div>
@@ -56,11 +66,13 @@ export default function Page({ categories }: Props) {
 //Backend code
 export const getServerSideProps: GetServerSideProps<Props> = async() => {
 
-    const categories = await fetchCategories()
+    const categories = await fetchCategories();
+    const products = await fetchProducts();
 
     return{
         props: {
-            categories
+            categories,
+            products
         }
     };
 };

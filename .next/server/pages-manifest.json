@@ -1,6 +1,8 @@
 {
+  "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
-  "/": "pages/index.js"
+  "/": "pages/index.js",
+  "/api/getProducts": "pages/api/getProducts.js",
+  "/api/getCategories": "pages/api/getCategories.js"
 }
