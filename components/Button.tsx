@@ -1,4 +1,5 @@
 import React from 'react'
+import LoadingDots from './LoadingDots';
 
 interface Props {
     title: string;
@@ -37,7 +38,13 @@ const Button = ({ title, onClick, width, loading, padding, noIcon }: Props) => {
             ></path>
           </svg>
         )}
-        {loading ? "Loading..." : title}
+        {loading ? 
+          (
+            <>
+              <p>Loading</p>
+              <LoadingDots />
+            </>
+          ) : title}
       </span>
     </button>
   )

@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import Link  from 'next/link';
 import { ShoppingBagIcon } from '@heroicons/react/24/outline'; // Asegúrate de importar el icono correcto
-import { selecBasketTotal, selectBasketItems } from '../redux/basketSlice';
+import { selectBasketTotal, selectBasketItems } from '../redux/basketSlice';
 import { useSelector } from 'react-redux';
 
 const Basket = () => {
     const items = useSelector(selectBasketItems);
-     const basketTotal = useSelector(selecBasketTotal);
+    const basketTotal = useSelector(selectBasketTotal);
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
