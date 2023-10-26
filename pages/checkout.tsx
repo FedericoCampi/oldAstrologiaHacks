@@ -6,7 +6,7 @@ import { selectBasketTotal, selectBasketItems } from '../redux/basketSlice'
 import Button from '../components/Button'
 import { useRouter } from 'next/router'
 import CheckoutProduct from '../components/CheckoutProduct'
-import Currency from 'react-currency-formatter';
+import Currency from 'react-currency-formatter-v2'
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
 import Stripe from 'stripe'
 import { fetchPostJSON } from '../utils/api-helpers'

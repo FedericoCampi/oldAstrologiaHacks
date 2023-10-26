@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
 import Button from '../components/Button';
 import { useMediaQuery } from 'react-responsive';
-import Currency from 'react-currency-formatter';
+import Currency from 'react-currency-formatter-v2'
 import { fetchLineItems } from '../utils/fetchLineItems';
 import { GetServerSideProps } from 'next';
 import { useSession } from 'next-auth/react';

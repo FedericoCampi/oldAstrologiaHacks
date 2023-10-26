@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react'
 import { urlFor } from '../sanity';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
-import Currency from 'react-currency-formatter';
+import Currency from 'react-currency-formatter-v2'
 import { useDispatch, useSelector } from 'react-redux';
 import { removeFromBasket } from '../redux/basketSlice';
 import toast from 'react-hot-toast';
