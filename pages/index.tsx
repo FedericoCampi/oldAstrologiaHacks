@@ -117,7 +117,7 @@ export default function Page({ categories, products }: Props) {
                 <div className="relative z-10 ">
 
                  </div>
-                <StarsCanvas className=""/>
+                <StarsCanvas />
             </div>
         </div> 
   )
