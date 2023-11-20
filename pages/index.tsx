@@ -106,8 +106,9 @@ export default function Page({ categories, products }: Props) {
                             <Image
                                 src={'/images/cartaNatal.png'}
                                 alt='cartaNatal'
-                                width={800}
-                                height={800} 
+                                width={720}
+                                height={500}
+                                layout="responsive"
                             />
                         </div> 
                     </div>
