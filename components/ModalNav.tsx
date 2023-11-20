@@ -19,7 +19,7 @@ export default function ModalNav({ title, onClick, width, loading, padding, noIc
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="text-white inline-flex w-full justify-center gap-x-1.5 cursor-pointer opacity-100 transition hover:opacity-50">
+        <Menu.Button className="link text-white inline-flex w-full justify-center gap-x-1.5 cursor-pointer opacity-100 transition hover:opacity-50">
           {title}
           {/* <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" /> */}
         </Menu.Button>

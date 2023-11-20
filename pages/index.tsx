@@ -29,9 +29,9 @@ export default function Page({ categories, products }: Props) {
                 <Landing/>
             </main>
             <section className="relative z-40 -mt-[100vh] min-h-screen bg-[#232222]">
-                <div className="space-y-10 py-16 h-full">
+                <div className="space-y-6 py-16 h-full">
                     <h1 className="text-center h-[40px] text-2xl sm:text-4xl font-medium tracking-wide
-                        text-white md:text-5xl opacity-100 transition hover:opacity-75 sm:h-[60px]">
+                        text-white md:text-5xl opacity-100 transition hover:opacity-75 sm:h-[50px]">
                         Calculá tu Carta Natal
                     </h1>
                     <div className="flex flex-col px-[30px] justify-center w-full items-center lg:flex-row lg:justify-evenly">
@@ -103,13 +103,13 @@ export default function Page({ categories, products }: Props) {
                                 </form>
                             </div>
                         </div> 
-                        <div className="max-w-[400px] pt-6 sm:max-w-[480px] sm:pt-12 lg:pl-6 xl:max-w-[620px] 2xl:max-w-[650px]">
+                        <div className="w-[300px] pt-10 flex items-center justify-center sm:w-[380px] md:w-[420px] lg:w-[600px]">
                             <Image
-                                src={'/images/CARTAANATAAL.png'}
+                                src={'/images/cartanatal2.png'}
                                 alt='cartaNatal'
                                 width={720}
                                 height={500}
-                                className="rotate-on-hover"
+                                className="rotate-on-hover w-[280px] sm:w-[350px] md:w-[400px] lg:w-[550px]"
                             />
                         </div> 
                     </div>
