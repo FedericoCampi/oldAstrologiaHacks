@@ -28,16 +28,16 @@ export default function Page({ categories, products }: Props) {
             </main>
             <section className="relative z-40 -mt-[100vh] min-h-screen bg-[#232222]">
                 <div className="space-y-10 py-16 h-full">
-                    <h1 className="text-center h-[50px] text-2xl sm:text-4xl font-medium tracking-wide
-                        text-white md:text-5xl opacity-100 transition hover:opacity-75">
+                    <h1 className="text-center h-[40px] text-2xl sm:text-4xl font-medium tracking-wide
+                        text-white md:text-5xl opacity-100 transition hover:opacity-75 sm:h-[60px]">
                         Calculá tu Carta Natal
                     </h1>
-                    <div className="flex flex-col px-[30px]">
-                        <div className="h-full w-full flex justify-center">
+                    <div className="flex flex-col px-[30px] justify-center w-full items-center lg:flex-row lg:justify-evenly">
+                        <div className="h-full max-w-[420px] flex justify-center bg-[#1c1c1c] border border-[#232222] p-6 mt-6 rounded-lg sm:max-w-[480px]">
                             <div className="text-white w-full">
                                 <form className="w-full max-w-lg">
                                     <div className="flex flex-wrap mb-6 w-full">
-                                        <div className="flex flex-wrap mb-6 w-full">
+                                        <div className="flex flex-wrap mb-6 mt-4 w-full">
                                             <label className="block uppercase tracking-wide text-xs font-bold mb-2" htmlFor="grid-first-name">
                                                 Mi nombre es:
                                             </label>
@@ -49,7 +49,7 @@ export default function Page({ categories, products }: Props) {
                                             </label>
                                             <input className="text-black appearance-none block w-full bg-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Ciudad/Estado/País"/>
                                         </div>
-                                        <div className="w-full mb-6 md:mb-0 w-full">
+                                        <div className="w-full mb-6 w-full">
                                             <label className="block uppercase tracking-wide text-xs font-bold mb-2" htmlFor="grid-first-name">
                                                 Mi fecha de nacimiento es:
                                             </label>
@@ -62,7 +62,7 @@ export default function Page({ categories, products }: Props) {
                                                 pattern="\d{2}/\d{2}/\d{4}" // Patrón para el formato DD/MM/YYYY
                                             />
                                         </div>
-                                        <div className="w-full mb-6 md:mb-0 w-full">
+                                        <div className="w-full mb-6 w-full">
                                             <label className="block uppercase tracking-wide text-xs font-bold mb-2" htmlFor="grid-first-name">
                                                 Mi horario de nacimiento es:
                                             </label>
@@ -93,8 +93,8 @@ export default function Page({ categories, products }: Props) {
                                                 </div> 
                                             </div>
                                         </div>
-                                        <div className="flex flex-wrap mb-6 w-full">
-                                            <button className='bg-[#1c1c1c] p-3 w-full rounded-lg'>
+                                        <div className="flex flex-wrap w-full">
+                                            <button className='bg-[#232222] p-3 w-full rounded-lg'>
                                                 Obtené tu Carta
                                             </button>
                                         </div>
@@ -102,12 +102,12 @@ export default function Page({ categories, products }: Props) {
                                 </form>
                             </div>
                         </div> 
-                        <div className="">
+                        <div className="max-w-[400px] pt-6 sm:max-w-[480px] sm:pt-12 lg:pl-6 xl:max-w-[620px] 2xl:max-w-[650px]">
                             <Image
                                 src={'/images/cartaNatal.png'}
                                 alt='cartaNatal'
-                                width={500}
-                                height={500} 
+                                width={800}
+                                height={800} 
                             />
                         </div> 
                     </div>
