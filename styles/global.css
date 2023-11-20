@@ -4,20 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    @font-face{
-        font-family: "Apercu";
-        font-weight: 700;
-        src: url("/fonts/ApercuFontFamily/ApercuBold.otf");
-    }
-    @font-face{
-        font-family: "dmsans";
-        font-weight: 700;
-        src: url("/fonts/DMsans/static/DMSans-Bold.ttf");
-    }
+@font-face{
+    font-family: "Apercu";
+    font-weight: 700;
+    src: url("/fonts/ApercuFontFamily/ApercuBold.otf");
+}
+@font-face{
+    font-family: "dmsans";
+    font-weight: 700;
+    src: url("/fonts/DMsans/static/DMSans-Bold.ttf");
 }
 
 @layer components {
+    
     .headerLink{
         @apply cursor-pointer opacity-75 transition hover:opacity-100;
     }
