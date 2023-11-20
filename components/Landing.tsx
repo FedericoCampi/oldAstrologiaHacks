@@ -18,18 +18,18 @@ const Landing = () => {
                     <TextAnimation/>
                     <div className='flex flex-col items-center'>
                         <Image 
-                            className='opacity-100 transition hover:opacity-75 w-[80px] sm:w-[100px] h-[60px] sm:h-[80px]'
-                            width={100}
-                            height={100}
+                            className='opacity-100 transition hover:opacity-75 w-[80px] h-[60px] sm:w-[100px] sm:h-[60px]'
+                            width={120}
+                            height={80}
                             src={'/logoAHwhite.png'} 
                             alt={'logoAH'}
+                            style={{ transform: 'scale(1)' }}
                         />
                         <p className='text-center text-[13px] text-white font-apercu opacity-100 transition hover:opacity-75'>
                             astrologíahacks
                         </p>
                     </div>
                 </div>
-                
             <StarsCanvas/>
             </div>
         </div>

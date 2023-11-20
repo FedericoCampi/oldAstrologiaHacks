@@ -7,6 +7,7 @@ import { getSession } from 'next-auth/react';
 import type { Session } from 'next-auth';
 import StarsCanvas from "../components/StarsCanvas";
 import Image from 'next/image'
+import '../styles/rotate.css';
 
 interface Props {
     categories: Category[];
@@ -108,16 +109,13 @@ export default function Page({ categories, products }: Props) {
                                 alt='cartaNatal'
                                 width={720}
                                 height={500}
-                                layout="responsive"
+                                className="rotate-on-hover"
                             />
                         </div> 
                     </div>
                 </div>
             </section>
             <div className="relative z-40 h-screen w-full overflow-hidden">
-                <div className="relative z-10 ">
-
-                 </div>
                 <StarsCanvas />
             </div>
         </div> 

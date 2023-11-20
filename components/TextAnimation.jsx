@@ -28,7 +28,7 @@ const TextAnimation = () => {
       }, [textos]);
     
       return (
-        <div className="texto-cambiante text-center text-white px-[20px] text-[35px] sm:px-[60px] lg:px-[100px] xl:px-[200px] 2xl:px-[300px] sm:text-[50px] sm:text-[70px] 2xl:text-[80px]">
+        <div className="texto-cambiante text-center text-white px-[20px] text-[35px] sm:px-[60px] lg:px-[100px] xl:px-[200px] 2xl:px-[300px] sm:text-[50px] sm:text-[60px] md:text-[60px] 2xl:text-[80px]">
           <div className={`rotar-texto ${animar ? 'animar' : ''} opacity-100 transition hover:opacity-75 `}>
             <span>{textos[indiceTexto]}</span>
           </div>

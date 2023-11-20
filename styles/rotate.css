@@ -1,0 +1,13 @@
+.image-container {
+    max-width: 400px;
+    padding-top: 6px;
+    position: relative;
+}
+
+.rotate-on-hover {
+    transition: transform 10s ease; /* Adjust the duration as needed */
+}
+
+.rotate-on-hover:hover {
+    transform: rotate(360deg);
+}
