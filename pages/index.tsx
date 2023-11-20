@@ -84,11 +84,11 @@ export default function Page({ categories, products }: Props) {
                                                 />
                                                 <div className='flex w-[50%] justify-evenly pb-[10px]'>
                                                 <input id="draft" className="peer/draft" type="radio" name="status" />
-                                                    <label for="draft" className="peer-checked/draft:text-white">
+                                                    <label htmlFor="draft" className="peer-checked/draft:text-white">
                                                         AM
                                                     </label>
                                                     <input id="draft" className="peer/draft" type="radio" name="status" />
-                                                    <label for="draft" className="peer-checked/draft:text-white">
+                                                    <label hmtlFor="draft" className="peer-checked/draft:text-white">
                                                         PM
                                                     </label>
                                                 </div> 
