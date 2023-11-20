@@ -8,12 +8,12 @@
     @font-face{
         font-family: "Apercu";
         font-weight: 700;
-        src: url("../public/fonts/ApercuFontFamily/ApercuBold.otf");
+        src: url("/fonts/ApercuFontFamily/ApercuBold.otf");
     }
     @font-face{
         font-family: "dmsans";
         font-weight: 700;
-        src: url("../public/fonts/DMsans/static/DMSans-Bold.ttf");
+        src: url("/fonts/DMsans/static/DMSans-Bold.ttf");
     }
 }
 
