@@ -8,6 +8,7 @@ import type { Session } from 'next-auth';
 import StarsCanvas from "../components/StarsCanvas";
 import Image from 'next/image'
 import '../styles/rotate.css';
+import Button from "../components/Button";
 
 interface Props {
     categories: Category[];
@@ -42,7 +43,7 @@ export default function Page({ categories, products }: Props) {
                                             <label className="block uppercase tracking-wide text-xs font-bold mb-2" htmlFor="grid-first-name">
                                                 Mi nombre es:
                                             </label>
-                                            <input className="text-black appearance-none block w-full bg-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Mario Lopéz"/>
+                                            <input className="text-black appearance-none block w-full bg-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Ignacio Rodriguez"/>
                                         </div>
                                         <div className="flex flex-wrap mb-6 w-full">
                                             <label className="block uppercase tracking-wide text-xs font-bold mb-2" htmlFor="grid-first-name">
@@ -75,6 +76,7 @@ export default function Page({ categories, products }: Props) {
                                                     min="1"
                                                     max="12"
                                                 />
+                                                <p className="pb-[10px] pr-[7px]">:</p>
                                                 <input
                                                     className="text-black appearance-none block w-1/4 bg-gray-200 rounded py-3 px-4 mb-3 mr-2 leading-tight focus:outline-none focus:bg-white"
                                                     type="number"
@@ -94,10 +96,8 @@ export default function Page({ categories, products }: Props) {
                                                 </div> 
                                             </div>
                                         </div>
-                                        <div className="flex flex-wrap w-full">
-                                            <button className='bg-[#232222] p-3 w-full rounded-lg'>
-                                                Obtené tu Carta
-                                            </button>
+                                        <div className="flex flex-wrap w-full justify-center">
+                                            <Button title="Obtené tu carta"/>
                                         </div>
                                     </div>
                                 </form>
@@ -105,7 +105,7 @@ export default function Page({ categories, products }: Props) {
                         </div> 
                         <div className="max-w-[400px] pt-6 sm:max-w-[480px] sm:pt-12 lg:pl-6 xl:max-w-[620px] 2xl:max-w-[650px]">
                             <Image
-                                src={'/images/cartaNatal.png'}
+                                src={'/images/CARTAANATAAL.png'}
                                 alt='cartaNatal'
                                 width={720}
                                 height={500}

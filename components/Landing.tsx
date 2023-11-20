@@ -18,7 +18,7 @@ const Landing = () => {
                     <TextAnimation/>
                     <div className='flex flex-col items-center'>
                         <Image 
-                            className='opacity-100 transition hover:opacity-75 w-[80px] h-[60px] sm:w-[100px] sm:h-[60px]'
+                            className='opacity-100 transition hover:opacity-75 w-[80px] h-[60px] sm:w-[100px] sm:h-[70px]'
                             width={120}
                             height={80}
                             src={'/logoAHwhite.png'} 

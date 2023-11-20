@@ -5,7 +5,7 @@
 }
 
 .rotate-on-hover {
-    transition: transform 10s ease; /* Adjust the duration as needed */
+    transition: transform 20s ease; /* Adjust the duration as needed */
 }
 
 .rotate-on-hover:hover {
