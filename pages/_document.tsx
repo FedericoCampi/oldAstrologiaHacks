@@ -4,8 +4,8 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <title>Apple store</title>
-        <link rel='icon' href='/appleIcon.ico'/>
+        <title>Astrología Hacks</title>
+        <link rel='icon' href='/logoICO.ico'/>
       </Head>
       <body>
         <Main />

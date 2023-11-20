@@ -12,10 +12,5 @@ export const authOptions = {
     }),
     // ...add more providers here
   ],
-  session: {
-    strategy: 'jwt'
-  },
-  secret: process.env.NEXTAUTH_SECRET,
-  adapter: SanityAdapter(sanityClient),
 }
 export default NextAuth(authOptions)

@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import { MagnifyingGlassIcon, ShoppingBagIcon, UserIcon, UserCircleIcon } from '@heroicons/react/24/outline'
 import { useSelector } from 'react-redux'
 import { selectBasketItems } from '../redux/basketSlice'
 import { signIn, signOut, useSession } from 'next-auth/react';
+import ModalNav from './ModalNav';
 
 const Header = () => {
 
@@ -12,28 +13,29 @@ const Header = () => {
   const items = useSelector(selectBasketItems)
 
   return (
-    <header className='sticky top-0 z-30 flex w-full items-center justify-between bg-[#E7ECEE] p-4'>
-      <div className='flex items-center justify-center md:w-1/5'>
+    <header className='sticky top-0 z-30 flex w-full items-center justify-between bg-transparent p-4'>
+      
+      <div className='flex items-center justify-center md:w-1/5 pl-6'>
         <Link href='/'>
-          <div className='relative w-5 cursor-pointer opacity-75 h-10 transition hover:opacity-100'>
+          <div className='relative w-5 cursor-pointer opacity-100 h-10 transition hover:opacity-75'>
               <Image 
-                src={'/appleIconBlack.png'} 
-                alt={'appleIcon'} 
+                src={'/logoAHwhite.png'} 
+                alt={'logoAH'} 
                 objectFit='contain' 
                 layout='fill' 
-                style={{ transform: 'scale(1.5)' }}
+                style={{ transform: 'scale(3.5)' }}
               />
           </div>
         </Link>
       </div>
-      <div className='hidden flex-1 items-center justify-center space-x-8 md:flex'>
-        <a className='headerLink'>Product</a>
-        <a className='headerLink'>Explore</a>
-        <a className='headerLink'>Support</a>
-        <a className='headerLink'>Business</a>
+      <div id='linksHeader' className='hidden flex-1 items-center justify-center space-x-8 md:flex'>
+        <ModalNav title='Calculá tu carta'/>
+        <ModalNav title='Tienda'/>
+        <ModalNav title='Blog'/>
+        <ModalNav title='Contacto'/>
       </div>
       <div className='flex items-center justify-center gap-x-4 md:w-1/5'>
-        <MagnifyingGlassIcon className='headerIcon'/>
+        <MagnifyingGlassIcon className='headerIcon' style={{ color: 'white' }}/>
         <Link href='/checkout'>
           <div className='relative cursor-pointer'>
             {items.length > 0 && (
@@ -42,7 +44,7 @@ const Header = () => {
                 {items.length}
               </span>
             )}
-            <ShoppingBagIcon className='headerIcon'/>
+            <ShoppingBagIcon className='headerIcon' style={{ color: 'white' }}/>
           </div>
         </Link>
         { session ? (
@@ -58,9 +60,11 @@ const Header = () => {
           />
         ) : (
           <UserCircleIcon className='headerIcon'
+            style={{ color: 'white' }}
             onClick={() => signIn()}
           />
         )}
+        
       </div>
     </header>
   )

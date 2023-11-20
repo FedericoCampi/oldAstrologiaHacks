@@ -1,29 +1,42 @@
 import Image from 'next/image'
-import React from 'react'
-import Button from './Button'
+import React  from 'react'
+import StarsCanvas from './StarsCanvas'
+import Header from './Header'
+import Basket from './Basket'
 
 const Landing = () => {
   return (
-    <section className='sticky top-0 mx-auto flex h-screen max-w-[1350px] items-center
-        justify-between px-8'>
-        <div className='space-y-8'>
-            <h1 className='space-y-3 text-5xl font-semibold tracking-wide lg:text-6xl xl:text-6xl'>
-                <span className='block bg-gradient-to-r from-pink-500 to-violet-500 
-                bg-clip-text text-transparent'>
-                    Powered
-                </span>
-                <span className='block'>By Intellect</span>
-                <span className='block'>Driven By Values</span>
-            </h1>
-            <div className='space-x-8'>
-                <Button title='Buy now'/>
-                <a className='link'>Learn more</a>
+    
+    <section className='sticky top-0 mx-auto flex h-screen w-full items-center
+        justify-between flex-col'>
+        <div className='h-full w-full'>
+            <Header/>
+            <Basket/>
+            
+        
+        <div className=' w-[100%] h-[100%]'>
+            <div className='flex flex-col h-[75%] justify-center items-center'>
+                <p className='text-center text-white text-[80px] opacity-100 transition hover:opacity-75 tracking-tight'>
+                    Astro guía al alcance de todos
+                </p>
+            </div>
+            <div className='flex flex-col items-center'>
+                    <Image 
+                        className='opacity-100 transition hover:opacity-75'
+                        width={130}
+                        height={130}
+                        src={'/logoAHwhite.png'} 
+                        alt={'logoAH'}
+                    />
+                    <p className='text-center text-white font-apercu opacity-100 transition hover:opacity-75'>
+                        astrologíahacks
+                    </p>
+                </div>
+                <StarsCanvas/>
             </div>
         </div>
-        <div className='relative hidden h-[450px] w-[450px] transition-all duration-500
-            md:inline lg:h-[500px] lg:w-[500px]'>
-            <Image src={'/iphone.png'} alt={'iphone'} layout='fill' objectFit='contain'/>
-        </div>
+        
+        
     </section>
   )
 }

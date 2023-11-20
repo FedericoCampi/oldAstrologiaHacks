@@ -23,13 +23,11 @@ export default function Page({ categories, products }: Props) {
         .map((product) => <Product product={product} key={product._id}/> );
     }
     return(
-        <div>
-            <Header/>
-            <Basket/>
-            <main className="relative h-[200vh] bg-[#E7ECEE]">
+        <div className="w-full font-dmsans">
+            <main className="relative h-[200vh] bg-[#1c1c1c] w-full">
                 <Landing/>
             </main>
-            <section className="relative z-40 -mt-[100vh] min-h-screen bg-[#1B1B1B]">
+            <section className="relative z-40 -mt-[100vh] min-h-screen bg-[#232222]">
                 <div className="space-y-10 py-16">
                     <h1 className="text-center text-4xl font-medium tracking-wide
                         text-white md:text-5xl">

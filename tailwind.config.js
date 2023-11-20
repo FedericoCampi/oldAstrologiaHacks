@@ -11,7 +11,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        body: ["Poppins", "sans-serif"],
+        "apercu":["Apercu"],
+        "dmsans":["dmsans"],
+
       }
     },
   },
