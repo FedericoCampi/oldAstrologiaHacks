@@ -88,7 +88,7 @@ export default function Page({ categories, products }: Props) {
                                                         AM
                                                     </label>
                                                     <input id="draft" className="peer/draft" type="radio" name="status" />
-                                                    <label hmtlFor="draft" className="peer-checked/draft:text-white">
+                                                    <label htmlFor="draft" className="peer-checked/draft:text-white">
                                                         PM
                                                     </label>
                                                 </div> 
