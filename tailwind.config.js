@@ -10,10 +10,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      position: ['fixed'],
       fontFamily:{
         "apercu":["Apercu"],
         "dmsans":["dmsans"],
-
       }
     },
   },

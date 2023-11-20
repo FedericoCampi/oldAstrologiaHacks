@@ -13,7 +13,7 @@ const Header = () => {
   const items = useSelector(selectBasketItems)
 
   return (
-    <header className='sticky top-0 z-30 flex w-full items-center justify-between bg-transparent p-4'>
+    <header className='absolute top-0 z-30 flex w-full items-center justify-between bg-transparent p-4'>
       
       <div className='flex items-center justify-center md:w-1/5 pl-6'>
         <Link href='/'>

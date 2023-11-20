@@ -23,7 +23,6 @@ export default function Page({ categories, products }: Props) {
     }
     return(
         <div className="w-full font-dmsans bg-[#1c1c1c]">
-            
             <main className="relative h-[200vh] w-full">
                 <Landing/>
             </main>
@@ -42,20 +41,20 @@ export default function Page({ categories, products }: Props) {
                                             <label className="block uppercase tracking-wide text-xs font-bold mb-2" htmlFor="grid-first-name">
                                                 Mi nombre es:
                                             </label>
-                                            <input className="appearance-none block w-full bg-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Mario Lopéz"/>
+                                            <input className="text-black appearance-none block w-full bg-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Mario Lopéz"/>
                                         </div>
                                         <div className="flex flex-wrap mb-6 w-full">
                                             <label className="block uppercase tracking-wide text-xs font-bold mb-2" htmlFor="grid-first-name">
                                                 Nací en:
                                             </label>
-                                            <input className="appearance-none block w-full bg-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Ciudad/Estado/País"/>
+                                            <input className="text-black appearance-none block w-full bg-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Ciudad/Estado/País"/>
                                         </div>
                                         <div className="w-full mb-6 md:mb-0 w-full">
                                             <label className="block uppercase tracking-wide text-xs font-bold mb-2" htmlFor="grid-first-name">
                                                 Mi fecha de nacimiento es:
                                             </label>
                                             <input
-                                                className="appearance-none block w-full bg-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                                                className="text-black appearance-none block w-full bg-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                                                 id="grid-first-name"
                                                 type="date"  //  Cambiado a type "date" 
                                                 placeholder="DD/MM/YYYY"
@@ -69,14 +68,14 @@ export default function Page({ categories, products }: Props) {
                                             </label>
                                             <div className="flex items-center w-full">
                                                 <input
-                                                    className="appearance-none block w-1/4 bg-gray-200 rounded py-3 px-4 mb-3 mr-2 leading-tight focus:outline-none focus:bg-white"
+                                                    className="text-black appearance-none block w-1/4 bg-gray-200 rounded py-3 px-4 mb-3 mr-2 leading-tight focus:outline-none focus:bg-white"
                                                     type="number"
                                                     placeholder="HH"
                                                     min="1"
                                                     max="12"
                                                 />
                                                 <input
-                                                    className="appearance-none block w-1/4 bg-gray-200 rounded py-3 px-4 mb-3 mr-2 leading-tight focus:outline-none focus:bg-white"
+                                                    className="text-black appearance-none block w-1/4 bg-gray-200 rounded py-3 px-4 mb-3 mr-2 leading-tight focus:outline-none focus:bg-white"
                                                     type="number"
                                                     placeholder="MM"
                                                     min="0"
@@ -94,6 +93,11 @@ export default function Page({ categories, products }: Props) {
                                                 </div> 
                                             </div>
                                         </div>
+                                        <div className="flex flex-wrap mb-6 w-full">
+                                            <button className='bg-[#1c1c1c] p-3 w-full rounded-lg'>
+                                                Obtené tu Carta
+                                            </button>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
@@ -109,8 +113,11 @@ export default function Page({ categories, products }: Props) {
                     </div>
                 </div>
             </section>
-            <div className="relative z-40 h-screen w-full bg-transparent">
-                    <StarsCanvas/>
+            <div className="relative z-40 h-screen w-full overflow-hidden">
+                <div className="relative z-10 ">
+
+                 </div>
+                <StarsCanvas className=""/>
             </div>
         </div> 
   )
