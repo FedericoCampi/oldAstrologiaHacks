@@ -1,0 +1,16 @@
+
+.texto-cambiante {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .rotar-texto {
+    display: inline-block;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .rotar-texto.animar {
+    opacity: 0;
+  }
